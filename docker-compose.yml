@@ -1,0 +1,7 @@
+﻿services:
+  telegram-bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - ./admins.json:/app/admins.json:ro
